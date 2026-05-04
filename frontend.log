@@ -1,0 +1,30 @@
+Re-optimizing dependencies because vite config has changed
+
+  [32m[1mVITE[22m v5.4.21[39m  [2mready in [0m[1m752[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://127.0.0.1:[1m5173[22m/[39m
+[2m1:17:52 pm[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2msrc/main.jsx[22m
+[2m1:17:52 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/rooms/RoomFilters.jsx, /src/index.css[22m
+[2m1:17:52 pm[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2msrc/redux/slices/bookingSlice.jsx[22m
+[2m1:17:52 pm[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2msrc/redux/slices/authSlice.jsx[22m
+[2m1:17:52 pm[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2msrc/redux/slices/roomSlice.jsx[22m
+[2m1:17:52 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/ProfilePage.jsx, /src/index.css[22m
+[2m1:17:52 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/BookingPage.jsx, /src/index.css[22m
+[2m1:17:52 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/booking/BookingForm.jsx, /src/index.css[22m
+[2m1:17:52 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/admin/AdminUsers.jsx, /src/index.css[22m
+[2m1:17:52 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/admin/AdminRooms.jsx, /src/index.css[22m
+[2m1:17:52 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/admin/AdminDashboard.jsx, /src/index.css[22m
+[2m1:17:52 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/admin/AdminBookings.jsx, /src/index.css[22m
+[2m3:26:30 pm[22m [36m[1m[vite][22m[39m [32m.env changed, restarting server...[39m
+[2m3:26:30 pm[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2mindex.html[22m
+[2m3:26:30 pm[22m [36m[1m[vite][22m[39m server restarted.
+[2m3:28:49 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/BookingPage.jsx, /src/index.css[22m
+[2m3:29:36 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/admin/AdminLayout.jsx, /src/index.css[22m
+[2m3:29:36 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/admin/AdminRooms.jsx, /src/index.css[22m
+[2m3:29:36 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/admin/AdminUsers.jsx, /src/index.css[22m
+[2m3:29:36 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/admin/AdminBookings.jsx, /src/index.css[22m
+[2m3:29:36 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/admin/AdminDashboard.jsx, /src/index.css[22m
+[2m3:30:19 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/rooms/RoomFilters.jsx, /src/index.css[22m
+[2m3:30:30 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/booking/BookingForm.jsx, /src/index.css[22m
+[2m3:30:30 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/UserDashboard.jsx, /src/index.css[22m
+[2m3:30:30 pm[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/HomePage.jsx, /src/index.css[22m
