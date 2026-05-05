@@ -47,7 +47,7 @@ const bookingSlice = createSlice({
       .addCase(createBooking.fulfilled, (state, action) => {
         state.loading = false;
         state.currentBooking = action.payload.booking;
-        toast.success('Booking created! Complete payment to confirm.');
+        toast.success('Booking created. Complete payment to confirm and lock the selected dates.');
       })
       .addCase(createBooking.rejected, (state, action) => {
         state.loading = false;

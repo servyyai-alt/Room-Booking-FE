@@ -41,6 +41,7 @@ export default function BookingPage() {
   const [paymentMethod, setPaymentMethod] = useState('razorpay');
   const [specialRequests, setSpecialRequests] = useState('');
   const [paying, setPaying] = useState(false);
+  const [confirmedBooking, setConfirmedBooking] = useState(null);
 
   const { checkIn, checkOut, guests, nights, pricing } = state || {};
 
@@ -97,19 +98,20 @@ export default function BookingPage() {
         prefill: { name: user?.name, email: user?.email },
         theme: { color: '#e05a27' },
         modal: {
-          ondismiss: () => toast('Payment was cancelled. Your booking is still pending.'),
+          ondismiss: () => toast('Payment was cancelled. The room is not locked until payment is completed.'),
         },
         handler: async (response) => {
           try {
-            await paymentService.verifyRazorpay({
+            const verifyRes = await paymentService.verifyRazorpay({
               bookingId: booking._id,
               razorpay_order_id: response.razorpay_order_id,
               razorpay_payment_id: response.razorpay_payment_id,
               razorpay_signature: response.razorpay_signature,
             });
+            setConfirmedBooking(verifyRes.data.booking);
             setStep(3);
-          } catch {
-            toast.error('Payment verification failed');
+          } catch (err) {
+            toast.error(err.response?.data?.message || 'Payment verification failed');
           }
         },
       });
@@ -282,6 +284,10 @@ export default function BookingPage() {
               <span className="font-bold text-primary-600 text-lg">Rs. {pricing?.total?.toLocaleString('en-IN')}</span>
             </div>
 
+            <p className="text-xs text-stone-500 mb-6">
+              Your room is only locked after full payment succeeds. Until then, the selected dates remain open.
+            </p>
+
             <button
               onClick={handleCreateAndPay}
               disabled={loading || paying}
@@ -308,9 +314,9 @@ export default function BookingPage() {
             <p className="text-stone-500 mb-6">
               Your stay at <strong>{room.name}</strong> is confirmed. Check your email for the booking details.
             </p>
-            {currentBooking && (
+            {(confirmedBooking || currentBooking) && (
               <p className="text-sm text-stone-400 mb-8">
-                Booking Reference: <strong className="text-primary-600">{currentBooking.bookingReference}</strong>
+                Booking Reference: <strong className="text-primary-600">{(confirmedBooking || currentBooking).bookingReference}</strong>
               </p>
             )}
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
